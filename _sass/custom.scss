@@ -129,11 +129,17 @@ input {
         #module-signup {
             position:static;
             background-color: #000000;
+            padding: $small;
         }
 
         #module-info {
             padding-top: $large;
             background-color: white;
+            padding: $medium;
         }
+    }
+
+    #module-outline {
+        padding: $small;
     }
 }

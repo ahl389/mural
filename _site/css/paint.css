@@ -124,10 +124,15 @@ input {
     background: black; }
     #banner-landing #module-signup {
       position: static;
-      background-color: #000000; }
+      background-color: #000000;
+      padding: 15px; }
     #banner-landing #module-info {
       padding-top: 50px;
-      background-color: white; } }
+      background-color: white;
+      padding: 30px; }
+
+  #module-outline {
+    padding: 15px; } }
 /* BASIC ELEMENTS */
 /**
 *** Fill in your own requirements for these as necessary
