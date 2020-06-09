@@ -13,6 +13,18 @@
         letter-spacing: 1px;
     }
 
+    #module-signup {
+        position:fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+    }
+}
+
+#module-outline {
+    margin-top: 300px;
+
     i {
         margin-right: 6px;
     }
@@ -22,16 +34,6 @@
         margin-bottom: 0;
     }
 
-    #module-signup {
-        position:fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-    }
-
-    #outline {
-        margin-top: 300px;
-    }
 }
 
 
@@ -117,7 +119,9 @@ input {
     transform: scaleX(1);
   }
 
-
+#banner-footer {
+    background-color: $accent-color;
+}
   @media (max-width: 768px) {
     #banner-landing {
         background:black;

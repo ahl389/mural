@@ -28,18 +28,20 @@ li {
     line-height: 1em; }
   #banner-landing h1, #banner-landing h2, #banner-landing h3 {
     letter-spacing: 1px; }
-  #banner-landing i {
-    margin-right: 6px; }
-  #banner-landing li {
-    list-style: none;
-    margin-bottom: 0; }
   #banner-landing #module-signup {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0; }
-  #banner-landing #outline {
-    margin-top: 300px; }
+    left: 0;
+    background-color: #000000; }
+
+#module-outline {
+  margin-top: 300px; }
+  #module-outline i {
+    margin-right: 6px; }
+  #module-outline li {
+    list-style: none;
+    margin-bottom: 0; }
 
 input {
   box-sizing: border-box;
@@ -113,6 +115,9 @@ input {
 .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1); }
+
+#banner-footer {
+  background-color: #2a1758; }
 
 @media (max-width: 768px) {
   #banner-landing {
