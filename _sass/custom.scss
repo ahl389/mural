@@ -1,0 +1,135 @@
+/* Enter your custom CSS below */
+
+#banner-landing {
+    background: rgb(255,255,255);
+    background: linear-gradient(270deg, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%);
+
+    h1 {
+        font-size: 6em;
+        line-height: 1em;
+    }
+
+    h1,h2,h3 {
+        letter-spacing: 1px;
+    }
+
+    i {
+        margin-right: 6px;
+    }
+
+    li {
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    #module-signup {
+        position:fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    #outline {
+        margin-top: 300px;
+    }
+}
+
+
+input {
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: $heading-font-family;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+.hvr-icon-forward {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+  }
+  .hvr-icon-forward .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-icon-forward:hover .hvr-icon, .hvr-icon-forward:focus .hvr-icon, .hvr-icon-forward:active .hvr-icon {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+
+  .hvr-sweep-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098D1;
+
+
+    background: rgb(42,23,88);
+    background: linear-gradient(90deg, rgba(42,23,88,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 5px;
+  }
+  .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+    color: white;
+  }
+  .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+
+  @media (max-width: 768px) {
+    #banner-landing {
+        background:black;
+        
+        #module-signup {
+            position:static;
+            background-color: #000000;
+        }
+
+        #module-info {
+            padding-top: $large;
+            background-color: white;
+        }
+    }
+}
