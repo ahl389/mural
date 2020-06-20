@@ -43,7 +43,7 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'string' }
       - { label: 'Track', name: 'track', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
-      - { label: 'Authors', name: 'author', widget: 'relation', collection: 'authors', valueField:'name', searchFields: ["name", "display_name", 'twitter'], multiple: true }
+      - { label: 'Authors', name: 'author', widget: 'relation', valueField: 'name', collection: 'authors', searchFields: ["name", "display_name", 'twitter'], multiple: true }
       - label: 'Lessons'
         name: 'lessons'
         widget: 'list'
