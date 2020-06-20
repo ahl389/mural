@@ -42,6 +42,14 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'string' }
       - { label: 'Track', name: 'track', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+      - label: 'Lessons'
+        name: 'lessons'
+        widget: 'list'
+        fields:
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'learn' }
+          - { label: 'Title', name: 'title', widget: 'string'}
+          - { label: 'Content', name: 'content', widget: 'markdown'}
+          - { label: 'Author', name: 'author', widget: 'object' } 
   - name: 'pages'
     label: 'Pages'
     editor:
