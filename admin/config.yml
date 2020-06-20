@@ -60,7 +60,21 @@ collections:
         name: 'about'
         file: 'about.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Title', name: 'title', widget: 'string', default: 'about' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Courses'
+        name: 'learn'
+        file: 'learn.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', default: 'about' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'All Courses'
+            name: 'allcourses'
+            widget: 'relation'
+            valueField: 'title'
+            collection: 'courses'
+            searchFields: ["title", "description", 'tags', 'author']
+            multiple: true 
       

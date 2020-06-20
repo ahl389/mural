@@ -30,6 +30,7 @@ collections:
       - { label: 'Display Name', name: 'display_name', widget: 'string' }
       - { label: 'Position', name: 'position', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Twitter', name: 'twitter', widget: 'string' }
   - name: 'courses'
     label: 'Courses'
     folder: '_courses/'
@@ -42,14 +43,14 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'string' }
       - { label: 'Track', name: 'track', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'Authors', name: 'author', widget: 'relation', valueField: 'name', collection: 'authors', searchFields: ["name", "display_name", 'twitter'], multiple: true }
       - label: 'Lessons'
         name: 'lessons'
         widget: 'list'
         fields:
-          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'learn' }
+          - { label: 'Layout', name: 'lessonlayout', widget: 'hidden', default: 'learn' }
           - { label: 'Title', name: 'title', widget: 'string'}
           - { label: 'Content', name: 'content', widget: 'markdown'}
-          - { label: 'Author', name: 'author', widget: 'object' } 
   - name: 'pages'
     label: 'Pages'
     editor:
@@ -59,7 +60,21 @@ collections:
         name: 'about'
         file: 'about.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Title', name: 'title', widget: 'string', default: 'about' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Courses'
+        name: 'learn'
+        file: 'learn.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', default: 'about' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'All Courses'
+            name: 'allcourses'
+            widget: 'relation'
+            valueField: 'title'
+            collection: 'courses'
+            searchFields: ["title", "description", 'tags', 'author']
+            multiple: true 
       
