@@ -1,5 +1,6 @@
 # config.yml
 
+local_backend: true
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
@@ -48,7 +49,7 @@ collections:
         name: 'lessons'
         widget: 'list'
         fields:
-          - { label: 'Layout', name: 'lessonlayout', widget: 'hidden', default: 'learn' }
+          - { label: 'Layout', name: 'lessonlayout', widget: 'hidden', default: 'lesson' }
           - { label: 'Title', name: 'title', widget: 'string'}
           - { label: 'Content', name: 'content', widget: 'markdown'}
   - name: 'pages'
@@ -68,13 +69,14 @@ collections:
         file: 'learn.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string', default: 'about' }
-          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'learn' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
           - label: 'All Courses'
             name: 'allcourses'
             widget: 'relation'
             valueField: 'title'
             collection: 'courses'
+            displayFields: ["title", "description", 'tags', 'author']
             searchFields: ["title", "description", 'tags', 'author']
             multiple: true 
       

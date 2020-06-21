@@ -1,3 +1,11 @@
+---
+title: Learn
+layout: learn
+allcourses:
+- Test course
+---
+
+
 <!doctype html>
 <html>
 
@@ -7,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ae5b0ff255.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/paint.css">
-    <title>{{ page.title }}</title>
+    <title>{{ title }}</title>
 </head>
 
 <body>
@@ -23,7 +31,7 @@
     <section class="banner">
         <div class="container">
             <div class="module w100">
-                {{ page.content }}
+                {{ page.body }}
             </div>
         </div>
     </section>
@@ -31,9 +39,8 @@
     <section class="banner">
         <div class="container">
             <div class="module w100">
-
                 {% for course in page.allcourses %}
-                {{ course }}
+                {{ course.title }}
                 {% endfor %}
             </div>
         </div>

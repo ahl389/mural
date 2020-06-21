@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ae5b0ff255.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/paint.css">
-    <title>{{ page.title }}</title>
+    <title>{{ lesson.title }}</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <section class="banner">
         <div class="container">
             <div class="module">
-                {{ page.title }}
+                {{ lesson.title }}
             </div>
         </div>
     </section>
@@ -23,23 +23,10 @@
     <section class="banner">
         <div class="container">
             <div class="module w100">
-                {{ page.content }}
+                {{ lesson.content }}
             </div>
         </div>
     </section>
-
-    <section class="banner">
-        <div class="container">
-            <div class="module w100">
-
-                {% for course in page.allcourses %}
-                {{ course }}
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-
 
 
 </body>

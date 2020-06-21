@@ -1,2 +1,11 @@
 sass:
     sass_dir: _sass
+collections:
+  courses:
+    output: true
+  authors:
+    output: true
+  blog:
+    output: true
+  pages:
+    output: true
