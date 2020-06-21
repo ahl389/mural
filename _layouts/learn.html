@@ -33,8 +33,11 @@
             {% for course in site.courses %}
             {% unless course.hide %}
             <div class="module w33 ps">
-                {{ course.title }}<br>
-                {{ course.description}}
+                {{ site.authors }}
+                {% assign author = site.authors | where: "name", course.author %}
+                Author: {{ author.twitter }}<br>
+                Title: {{ course.title }}<br>
+                Description: {{ course.description}}
             </div>
             {% endunless %}
             {% endfor %}
