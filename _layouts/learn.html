@@ -30,12 +30,14 @@
 
     <section class="banner">
         <div class="container">
-            <div class="module w100">
-
-                {% for course in page.allcourses %}
-                {{ course }}
-                {% endfor %}
+            {% for course in site.courses %}
+            {% unless course.hide %}
+            <div class="module w33 ps">
+                {{ course.title }}<br>
+                {{ course.description}}
             </div>
+            {% endunless %}
+            {% endfor %}
         </div>
     </section>
 
