@@ -4,6 +4,7 @@ title: Test course
 tags: tag
 track: track
 description: a summary
+hide: true
 author:
   - Ashley
 lessons:
