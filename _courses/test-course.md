@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: course
 title: Test course
 tags: tag
 track: track

@@ -33,9 +33,8 @@
             {% for course in site.courses %}
             {% unless course.hide %}
             <div class="module w33 ps">
-                {{ site.authors }}
-                {% assign author = site.authors | where: "name", course.author %}
-                Author: {{ author.twitter }}<br>
+                {% assign author = site.authors | where: "name", course.author[0] | first %}
+                Author: {{ author.twitter }}
                 Title: {{ course.title }}<br>
                 Description: {{ course.description}}
             </div>
@@ -45,6 +44,12 @@
     </section>
 
 
+
+
+
+    {% for a in authors %}
+    Author: {{ a.twitter }}<br>
+    {% endfor %}
 
 
 </body>

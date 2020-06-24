@@ -43,6 +43,10 @@ li {
     list-style: none;
     margin-bottom: 0; }
 
+.banner.banner-lesson .lesson {
+  border-radius: 25px 25px 0px 0px;
+  box-shadow: 0px 0px 25px 3px #eee; }
+
 input {
   box-sizing: border-box;
   font-size: 1em;

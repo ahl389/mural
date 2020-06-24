@@ -7,43 +7,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ae5b0ff255.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/paint.css">
-    <title>Test course</title>
+    <title>{{ page.title }}</title>
 </head>
 
 <body>
-    
+    {% assign course = page %}
     <section class="banner">
         <div class="container text-center">
             <div class="module">
-                Test course
+                {{ course.title }}
             </div>
         </div>
     </section>
 
-    
-    
-    <section class="banner banner-lesson" id="lesson-I am a lesson">
+    {{ author }}
+    {% for lesson in course.lessons %}
+    <section class="banner banner-lesson" id="lesson-{{ lesson.title | handleize }}">
         <div class="container">
             <div class="module w100 pl lesson">
-                <h2 class="text-center">I am a lesson</h2>
-                I am the lesson's content
+                <h2 class="text-center">{{ lesson.title }}</h2>
+                {{ lesson.content }}
             </div>
         </div>
     </section>
-    
+    {% endfor %}
 
     <section class="banner">
         <div class="container">
-            
-            
+            {% for course in site.courses %}
+            {% unless course.hide %}
             <div class="module w33 ps">
-                
-                Author: ahl389
-                Title: Test course<br>
-                Description: a summary
+                {% assign author = site.authors | where: "name", course.author[0] | first %}
+                Author: {{ author.twitter }}
+                Title: {{ course.title }}<br>
+                Description: {{ course.description}}
             </div>
-            
-            
+            {% endunless %}
+            {% endfor %}
         </div>
     </section>
 
@@ -51,7 +51,9 @@
 
 
 
-    
+    {% for a in authors %}
+    Author: {{ a.twitter }}<br>
+    {% endfor %}
 
 
 </body>
