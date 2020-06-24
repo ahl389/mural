@@ -148,4 +148,130 @@ lessons:
       $ favorite_color = 'grapes'
 
       ```
+
+
+
+
+
+
+
+
+  - lessonlayout: lesson
+    title: Output
+    content: >-
+      ## Introducing Output
+
+
+      So, I won't lie, I broke a cardinal rule of programming education by teaching you about variables as a first lesson.
+
+
+      Tradition dictates that the very line of code you ever write should be printing out the words "Hello, world". That once action, in and of itself, is a small program, and its earliest origins seem to be from old coding tutorials from the 70s.
+
+
+      So, my apologies for having robbed you of this transcendental experience. 
+
+
+      To make up for my trangression, we'll cover writing your very own "Hello, world!" program in this lesson. But to do that, we need to cover _how_ to output things in Python.
+
+
+      The most basic form of output is "printing". And that's not like printing a document on a physical piece of paper, it's printing from your code to some display. Most of the time, that display will be your terminal, or maybe a log, or a web browser. 
+
+
+
+      ## Code Example<a name = "codeexample"></a>
+
+
+      To print something in Python, you write the word `print` followed by a set of parentheses, `()`.
+
+
+      Inside the parentheses, you include the contents of what you want printed. This could be a string literal like `'Ashley'`, or another literal like a number, for example, or it could be a variable. 
+
+
+      As you learned in the previous lesson, variables are a way to store data. When you use a variable in your code, you're telling the Python interpretor to go grab the information stored in that variable's bucket.
+
+
+      Let's look at this example:
+
+
+      ```python
+
+      # This code creates a variable called my_name that references the value 'Ashley'
+
+      my_name = 'Ashley'
+
+
+      # This code prints the value of my_name
+
+      print(my_name)
+
+      ```
+
+
+      The following code is equivalent in outcome, but not in processing, to the code above:
+
+
+      ```python
+
+      print('Ashley')
+
+      ```
+
+
+
+      ## TLDR
+
+
+      - Printing in Python is a way to output something from your code to a display, like your terminal or a web browser.
+
+      - You can print literals or variables.
+
+      - To print, use the following syntax:
+
+
+      ```python
+
+      print('Your Content Here')
+
+      ```
+
+
+
+      ## Activities
+
+
+      Aright, back to the previously promised `Hello, world!` program. Are you ready for your true entry to the world of programming??
+
+
+      1. Open up your terminal and start the Python interpreter. <a href = "#solution1">See Solution</a>
+
+
+      2. After the interpreter is running, print out the string literal `'Hello, world!'`. Don't forget: hit the enter key after typing the code in order for it to execute. <a href = "#solution2">See Solution</a>
+
+
+
+      ## Solutions
+
+
+      ### Activity 1<a name = "solution1"></a>
+
+      Open up your terminal, and start the Python interpreter. 
+
+
+      ```terminal
+
+      $ python3
+
+      ```
+
+
+      ### Activity 2<a name = "solution2"></a>
+
+      After the interpreter is running, print out the string literal `'Hello, world!'`.
+
+
+      ```python
+
+      print('Hello, world!')
+
+      ```
 ---
