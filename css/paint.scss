@@ -456,6 +456,11 @@ $i: 5;
 	padding: $large;
 }
 
+.pxl {
+	padding: $xl;
+}
+
+
 
 .padding-top-mini, 
 .ptxs {
@@ -475,6 +480,10 @@ $i: 5;
 .padding-top-large, 
 .ptl {
 	padding-top: $large;
+}
+
+.ptxl {
+	padding-top: $xl;
 }
 
 
@@ -498,6 +507,10 @@ $i: 5;
 	padding-right: $large;
 }
 
+.prxl {
+	padding-right: $xl;
+}
+
 
 .padding-bottom-mini, 
 .pbxs {
@@ -519,6 +532,9 @@ $i: 5;
 	padding-bottom: $large;
 }
 
+.pbxl {
+	padding-bottom: $xl;
+}
 
 .padding-left-mini,
 .plxs {
@@ -538,6 +554,10 @@ $i: 5;
 .padding-left-large,
 .pll {
 	padding-left: $large;
+}
+
+.plxl {
+	padding-left: $xl;
 }
 
 

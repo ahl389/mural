@@ -21,16 +21,50 @@
     </section>
 
     {{ author }}
-    {% for lesson in course.lessons %}
+
+    {% assign main_lesson = course.lessons | first %}
+
     <section class="banner banner-lesson" id="lesson-{{ lesson.title | handleize }}">
-        <div class="container">
-            <div class="module w100 pl lesson">
-                <h2 class="text-center">{{ lesson.title }}</h2>
-                {{ lesson.content }}
+        <div class="container lesson">
+            <div class="module w100 ptxl">
+                <h1 class="text-center mbm rainbow">{{ main_lesson.title }}</h1>
             </div>
+
+            <div class="module w100">
+                <div class="container align-center">
+                    <div class="module ps">
+                        <a href="#lesson"><i class="fas fa-2x fa-book-open"></i></a>
+                    </div>
+
+                    <div class="module ps">
+                        <a href="#codeexample"><i class="fas fa-2x fa-code"></i></a>
+                    </div>
+
+                    <div class="module ps">
+                        <a href="#tldr"><i class="fas fa-2x fa-th-list"></i></a>
+                    </div>
+
+                    <div class="module ps">
+                        <a href="#activity"><i class="fas fa-2x fa-pencil-ruler"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module w100 plxl prxl pbxl large">
+                {{ main_lesson.content | markdownify }}
+            </div>
+
+            {% for lesson in course.lessons %}
+            {% unless lesson == main_lesson %}
+            <div class="module w100 pm bold">
+                {{ lesson.title  }}
+            </div>
+            {% endunless %}
+            {% endfor %}
         </div>
     </section>
-    {% endfor %}
+
+
 
     <section class="banner">
         <div class="container">
@@ -57,5 +91,7 @@
 
 
 </body>
+
+<script src="../js/rainbow.js"></script>
 
 </html>

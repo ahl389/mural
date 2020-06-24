@@ -21,16 +21,133 @@
     </section>
 
     
+
     
-    <section class="banner banner-lesson" id="lesson-I am a lesson">
-        <div class="container">
-            <div class="module w100 pl lesson">
-                <h2 class="text-center">I am a lesson</h2>
-                I am the lesson's content
+
+    <section class="banner banner-lesson" id="lesson-">
+        <div class="container lesson">
+            <div class="module w100 ptxl">
+                <h1 class="text-center mbm rainbow">Variables</h1>
             </div>
+
+            <div class="module w100">
+                <div class="container align-center">
+                    <div class="module ps">
+                        <a href="#lesson"><i class="fas fa-2x fa-book-open"></i></a>
+                    </div>
+
+                    <div class="module ps">
+                        <a href="#codeexample"><i class="fas fa-2x fa-code"></i></a>
+                    </div>
+
+                    <div class="module ps">
+                        <a href="#tldr"><i class="fas fa-2x fa-th-list"></i></a>
+                    </div>
+
+                    <div class="module ps">
+                        <a href="#activity"><i class="fas fa-2x fa-pencil-ruler"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module w100 plxl prxl pbxl large">
+                
+<h2 id="introduction-to-variables">Introduction to Variables<a name="lesson"></a></h2>
+<p>Okay, so we’ve learned that programming is really just giving your computer instructions in a way that it can understand.</p>
+
+<p>In order to do this, it’s helpful to store information that we can reference over and over. This way we can keep telling the computer, “Hey, look at this!”, and it will know what we’re talking about.</p>
+
+<p>To store information, we use <em>variables</em>. Variables are found in every single programming language - they are a fundamental part of helping your computer know what the f*ck you want it to do.</p>
+
+<p>You can think of variables as a bucket of information to which you give a name. Romeo had it right when he said “What’s in a name - a rose by any other name would smell as sweet.” The name you give your variable, from the computer’s perspective doesn’t matter. From a human perspective, it matters a lot. But we’ll get into that in a second.</p>
+
+<p>There are lots of different things we can store in variables. In Python, we call these things <em>objects</em>. Object is a term you’ll hear a lot in programming. You might also hear things like “everything in Python is an object.” That’s true, and the specifics of what that really means will be coming later in this course.</p>
+
+<p>For right now, try to frame your thinking around the idea that the <em>stuff</em> of Python are objects. This includes words and typed characters (these are called <em>strings</em>), integers and other numerical forms, groups of data called <em>lists</em>, <em>dictionaries</em>, <em>tuples</em>, and <em>sets</em>, and other objects that you can create and define yourself. Any of these things can be stored inside of a variable for referencing at any point in your code (with some limitations, ::wink::).</p>
+
+<h2 id="code-example">Code Example<a name="codeexample"></a></h2>
+
+<p>Here is a line of Python code that declares a variable and assigns a value to it:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_name</span> <span class="o">=</span> <span class="s">'Ashley'</span>
+</code></pre></div></div>
+
+<p>Let’s break this down into it’s different parts:</p>
+
+<blockquote>
+  <p>We have a variable name: <code class="highlighter-rouge">my_name</code></p>
+</blockquote>
+
+<p>I came up with the name <code class="highlighter-rouge">my_name</code>. Variable names can, generally speaking, be whatever you like. Here are some guidelines:</p>
+
+<ul>
+  <li>Variable names cannot start with numbers. For example, <code class="highlighter-rouge">1var</code> is not a valid variable name.</li>
+  <li>Variable names cannot be one of Python’s reserved keywords.</li>
+  <li>Variables names should be descriptive and short.</li>
+  <li>Variable names that have more than one word should be written in “snake cake”. Snake case is when you replace all the spaces with underscores. For example, <code class="highlighter-rouge">this_is_snake_case</code>. This is common throughout all of Python.</li>
+</ul>
+
+<blockquote>
+  <p>Then we have an equals sign: <code class="highlighter-rouge">=</code></p>
+</blockquote>
+
+<p>The equals sign indicates assignment. We are assigning the value on the right hand side of the equals sign to the variable we declared on left side of the equals sign.</p>
+
+<blockquote>
+  <p>Then we have the value that’s being assigned to the variable: <code class="highlighter-rouge">'Ashley'</code>.</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">'Ashley'</code> is wrapped in quotes because it is a string. If it was not wrapped in quotes, the Python interpreter would think I was referencing another variable, and it would get confused, and throw an error. Remember - programming is about being super explicit so the computer knows wtf we’re talking about. This is one of those instances.</p>
+
+<h2 id="tldr">TLDR</h2>
+
+<ul>
+  <li>Variables are a way to store data and reference it later.</li>
+  <li>Variables can be named whatever you like but cannot start with a number.</li>
+  <li>Variable names should be descriptive and short.</li>
+  <li>Variable names should be written in <code class="highlighter-rouge">snake_case</code>.</li>
+  <li>The syntax for creating a variable is:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">variable_name</span> <span class="o">=</span> <span class="s">'variable_value'</span> <span class="c1"># this could be a string, or any other Python object/value
+</span></code></pre></div></div>
+
+<h2 id="activity">Activity</h2>
+
+<p>Now you try!</p>
+
+<ol>
+  <li>
+    <p>Open up your terminal, and start the Python interpreter. <a href="#solution1">See Solution</a></p>
+  </li>
+  <li>
+    <p>Create a variable called <code class="highlighter-rouge">favorite_color</code> and assign to it your favorite color. <a href="#solution2">See Solution</a></p>
+  </li>
+</ol>
+
+<h2 id="solutions">Solutions</h2>
+
+<h3 id="activity-1">Activity 1<a name="solution1"></a></h3>
+<p>Open up your terminal, and start the Python interpreter.</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> python3
+</code></pre></div></div>
+
+<h3 id="activity-2">Activity 2<a name="solution2"></a></h3>
+<p>Create a variable called <code class="highlighter-rouge">favorite_color</code> and assign to it your favorite color.</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> favorite_color <span class="o">=</span> <span class="s1">'grapes'</span>
+</code></pre></div></div>
+
+            </div>
+
+            
+            
+            
         </div>
     </section>
-    
+
+
 
     <section class="banner">
         <div class="container">
@@ -55,5 +172,7 @@
 
 
 </body>
+
+<script src="../js/rainbow.js"></script>
 
 </html>

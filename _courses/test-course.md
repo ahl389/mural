@@ -9,23 +9,10 @@ author:
   - Ashley
 lessons:
   - lessonlayout: learn
-    title: I am a lesson
+    title: Variables
     content: >+
-      # Variables
-
-
-      - [Lesson](#lesson)
-
-      - [Code Example](#codeexample)
-
-      - [TLDR](#tldr)
-
-      - [Activity](#activity)
-
-      - [Solutions](#solutions)
-
-
-      ## Lesson
+      
+      ## Introduction to Variables<a name="lesson">
 
       Okay, so we've learned that programming is really just giving your computer instructions in a way that it can understand.
 
