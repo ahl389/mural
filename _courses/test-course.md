@@ -53,6 +53,9 @@ lessons:
 
       I came up with the name `my_name`. Variable names can, generally speaking, be whatever you like. Here are some guidelines:
 
+      <div class = "note" markdown="1">
+
+      ### Variable Name Guidelines
 
       - Variable names cannot start with numbers. For example, `1var` is not a valid variable name.
 
@@ -62,6 +65,8 @@ lessons:
 
       - Variable names that have more than one word should be written in "snake cake". Snake case is when you replace all the spaces with underscores. For example, `this_is_snake_case`. This is common throughout all of Python.
 
+
+      </div>
 
       > Then we have an equals sign: `=`
 

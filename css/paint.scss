@@ -66,14 +66,15 @@ a {
 
 button,
 .button {
-	background-color: $button-color;
-	color: #fff;
-	border-radius: 5px;
-	padding: 12px;
+	background-color: white;
+	color:$button-color;
+	border-radius: 25px;
+	padding: $mini $small;
 	border: none;
 	cursor: pointer;
 	display: inline-block;
 	width: auto;
+	border: 2px solid $button-color;
 }
 
 .panel {

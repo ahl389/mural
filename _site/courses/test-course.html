@@ -5,21 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ae5b0ff255.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/paint.css">
     <title>Test course</title>
 </head>
 
 <body>
-    
-    <section class="banner">
-        <div class="container text-center">
-            <div class="module">
-                Test course
-            </div>
-        </div>
-    </section>
-
     
 
     
@@ -79,14 +71,16 @@
 </blockquote>
 
 <p>I came up with the name <code class="highlighter-rouge">my_name</code>. Variable names can, generally speaking, be whatever you like. Here are some guidelines:</p>
+<div class="note">
+  <h3 id="variable-name-guidelines">Variable Name Guidelines</h3>
+  <ul>
+    <li>Variable names cannot start with numbers. For example, <code class="highlighter-rouge">1var</code> is not a valid variable name.</li>
+    <li>Variable names cannot be one of Python’s reserved keywords.</li>
+    <li>Variables names should be descriptive and short.</li>
+    <li>Variable names that have more than one word should be written in “snake cake”. Snake case is when you replace all the spaces with underscores. For example, <code class="highlighter-rouge">this_is_snake_case</code>. This is common throughout all of Python.</li>
+  </ul>
 
-<ul>
-  <li>Variable names cannot start with numbers. For example, <code class="highlighter-rouge">1var</code> is not a valid variable name.</li>
-  <li>Variable names cannot be one of Python’s reserved keywords.</li>
-  <li>Variables names should be descriptive and short.</li>
-  <li>Variable names that have more than one word should be written in “snake cake”. Snake case is when you replace all the spaces with underscores. For example, <code class="highlighter-rouge">this_is_snake_case</code>. This is common throughout all of Python.</li>
-</ul>
-
+</div>
 <blockquote>
   <p>Then we have an equals sign: <code class="highlighter-rouge">=</code></p>
 </blockquote>
@@ -139,32 +133,30 @@
 <div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> favorite_color <span class="o">=</span> <span class="s1">'grapes'</span>
 </code></pre></div></div>
 
+
             </div>
 
             
             
             
-        </div>
-    </section>
-
-
-
-    <section class="banner">
-        <div class="container">
             
-            
-            <div class="module w33 ps">
-                
-                Author: ahl389
-                Title: Test course<br>
-                Description: a summary
+            <div class="module w100 plxl prxl pbxl next-lesson pm bold">
+                Output
             </div>
             
             
         </div>
     </section>
 
+    <section class="banner" id="banner-next">
+        <div class="container lesson">
 
+        </div>
+    </section>
+
+    <div class="button glossary-add">
+        <i class="fas fa-plus"></i> Add to Glossary
+    </div>
 
 
 
@@ -174,5 +166,18 @@
 </body>
 
 <script src="../js/rainbow.js"></script>
+<script>
+    window.addEventListener('mouseup', e => {
+        var selObj = window.getSelection();
+        console.log(selObj.toString())
+        if (selObj.toString() !== '') {
+            $('.glossary-add').show();
+            setTimeout(() => {
+                $('.glossary-add').hide()
+            }, 5000);
+        }
+    });
+
+</script>
 
 </html>

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ae5b0ff255.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/paint.css">
     <title>{{ page.title }}</title>
@@ -12,15 +13,6 @@
 
 <body>
     {% assign course = page %}
-    <section class="banner">
-        <div class="container text-center">
-            <div class="module">
-                {{ course.title }}
-            </div>
-        </div>
-    </section>
-
-    {{ author }}
 
     {% assign main_lesson = course.lessons | first %}
 
@@ -56,7 +48,7 @@
 
             {% for lesson in course.lessons %}
             {% unless lesson == main_lesson %}
-            <div class="module w100 pm bold">
+            <div class="module w100 plxl prxl pbxl next-lesson pm bold">
                 {{ lesson.title  }}
             </div>
             {% endunless %}
@@ -64,24 +56,15 @@
         </div>
     </section>
 
+    <section class="banner" id="banner-next">
+        <div class="container lesson">
 
-
-    <section class="banner">
-        <div class="container">
-            {% for course in site.courses %}
-            {% unless course.hide %}
-            <div class="module w33 ps">
-                {% assign author = site.authors | where: "name", course.author[0] | first %}
-                Author: {{ author.twitter }}
-                Title: {{ course.title }}<br>
-                Description: {{ course.description}}
-            </div>
-            {% endunless %}
-            {% endfor %}
         </div>
     </section>
 
-
+    <div class="button glossary-add">
+        <i class="fas fa-plus"></i> Add to Glossary
+    </div>
 
 
 
@@ -93,5 +76,18 @@
 </body>
 
 <script src="../js/rainbow.js"></script>
+<script>
+    window.addEventListener('mouseup', e => {
+        var selObj = window.getSelection();
+        console.log(selObj.toString())
+        if (selObj.toString() !== '') {
+            $('.glossary-add').show();
+            setTimeout(() => {
+                $('.glossary-add').hide()
+            }, 5000);
+        }
+    });
+
+</script>
 
 </html>
